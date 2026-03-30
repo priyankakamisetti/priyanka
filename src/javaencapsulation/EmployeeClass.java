@@ -2,49 +2,39 @@ package javaencapsulation;
 
 public class EmployeeClass {
 	
-	    private String name;
+	 private String name;
 	    private int employeeId;
-	    private double salary;
-	   
+	    private int salary;
 
-     EmployeeClass(String name, int employeeId, double salary) {
+	    // Getter methods
+	    public String getName() {
+	        return name;
+	    }
+
+	    public int getEmployeeId() {
+	        return employeeId;
+	    }
+
+	    public int getSalary() {
+	        return salary;
+	    }
+
+	    // Setter methods
+	    public void setName(String name) {
 	        this.name = name;
+	    }
+
+	    public void setEmployeeId(int employeeId) {
 	        this.employeeId = employeeId;
-	        this.salary = salary;
-	        
-	        
 	    }
-	    void displayInfo() {
-	        System.out.println("Employee Name: " + name);
-	        System.out.println("Employee ID: " + employeeId);
-	        System.out.println("Salary: " + salary);
-	   
-	        System.out.println("---------------------------");
+
+	    public void setSalary(int salary) {
+	        if (salary >= 0 && salary <= 100) {
+	            this.salary = salary;
+	        } else {
+	            System.out.println("error in salary");
+	        }
 	    }
-		public String getName() {
-			return name;
-		}
-		public void setName(String name) {
-			this.name = name;
-		}
-		public int getEmployeeId() {
-			return employeeId;
-		}
-		public void setEmployeeId(int employeeId) {
-			this.employeeId = employeeId;
-		}
-		public double getSalary() {
-			return salary;
-		}
-		public void setSalary(double salary) {
-			this.salary = salary;
-		}
-		
-	
-		}
-	    
-	   
+
 	    
 }
-
-
