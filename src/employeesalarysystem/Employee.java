@@ -1,51 +1,66 @@
 package employeesalarysystem;
 
-public class Employee {
-	//parent
+ class Employee {
 	
-	private String Name;
-	private double BaseSalary;
+	private String name;
+	private int baseSalary;
 	//get method
 	public String getName() {
-	return Name;
+	return name;
 }
+	public void setName(String name) {
+		this.name=name;
+	}
 
-public double getBaseSalary() {
-	return BaseSalary;
+public int getBaseSalary() {
+	return baseSalary;
+}
+public void setBaseSalary(int baseSalary) {
+	this.baseSalary=baseSalary;
 }
 	
-// Method to calculate salary 
-public double calculateSalary() {
-    return BaseSalary;
+ int calculateSalary() {
+    return baseSalary;
 }
 }
 
-//Subclass: FullTimeEmployee
-class FullTimeEmployee extends Employee {
-public double calculateSalary() {
-    // Example: Full-time employees get 20% bonus
-    return getBaseSalary() + (getBaseSalary() * 0.20);
+// FullTimeEmployee
+ class FullTimeEmployee extends Employee {
+ int calculateSalary() {
+	 int PF= 1000;
+    return getBaseSalary() + PF;
 }
 }
 
-//Subclass: Intern
+// Intern
 class Intern extends Employee {
-public double calculateSalary() {
-    // Example: Interns get only base salary (or reduced)
-    return getBaseSalary() * 0.50;
+ int calculateSalary() {
+    return getBaseSalary();
 }
 }
+
+    class EmployeeSalary{
+	public static void main(String [] args) {
+		FullTimeEmployee emp1=new FullTimeEmployee();
+		emp1.setName("priyanka");
+		emp1.setBaseSalary(50000);
+		
+		Intern emp2=new Intern();
+		emp2.setName("aadvi");
+		emp2.setBaseSalary(25000);
+		System.out.println("Full time salary:" +emp1.calculateSalary());
+		System.out.println("Intern salary:" +emp2.calculateSalary());
+		System.out.println(emp1.getName());
+		System.out.println(emp2.getBaseSalary());
+	}
+}
+	
+	
+	 
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 
