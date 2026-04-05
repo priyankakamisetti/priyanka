@@ -8,11 +8,11 @@ public class MarksArray {
 	        int lowest = marks[0];
 	        int countAbove75 = 0;
 	        
-	        // Print all marks and calculate values
+	        // Print marks
 	        System.out.println("Marks:");
 	        for (int i = 0; i < marks.length; i++) {
 	            System.out.println(marks[i]);
-
+                //total
 	            total += marks[i];
 
 	            // Find highest
@@ -31,10 +31,10 @@ public class MarksArray {
 	            }
 	        }
 
-	        // Calculate average
+	   
 	        double average = (double) total / marks.length;
 
-	        // Print results
+	  
 	        System.out.println("\nTotal Marks: " + total);
 	        System.out.println("Average Marks: " + average);
 	        System.out.println("Highest Mark: " + highest);

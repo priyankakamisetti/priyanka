@@ -10,6 +10,12 @@ class Car implements Vehicle{
 	String brand;
 	int Speed=80;
 	
+	Car(String brand){
+		this.brand=brand;
+	}
+	 void display() {
+		System.out.println("Brand:" +brand);
+	}
 	public void start() {
 		System.out.println("Start the Car");
 	}

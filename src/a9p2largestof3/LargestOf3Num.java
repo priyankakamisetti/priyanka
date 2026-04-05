@@ -1,0 +1,17 @@
+package a9p2largestof3;
+
+public class LargestOf3Num {
+	public static void main(String[] args) {
+	int a=45, b=78,c=23;
+	int largest;{
+	if(a>=b && a>=c) {
+		largest = a;
+	}
+	else if( b>=a && b>=c) {
+		largest = b;
+	}
+	else largest = c;
+	System.out.println("Largest number is:" +largest);
+}
+}
+}

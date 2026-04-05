@@ -30,12 +30,13 @@ public class BankAccount{
 class savingAccount extends BankAccount{
 	int balance=1000;
 	void withdraw(int amount) {
-		if(amount<=balance) {
+		if(amount>=balance) {
 		balance-=amount;
 		System.out.println("withdraw:" +amount);
 		}else {
 			System.out.println("Insufficient Balance");
 		}
+}
 }
 class CurrentAccount extends BankAccount{
 	int balance=1000;
@@ -48,6 +49,8 @@ class CurrentAccount extends BankAccount{
 		}
 }
 }
+
+
 
 public class BankAccountDetails{
 	public static void main(String[] args) {
@@ -63,7 +66,6 @@ public class BankAccountDetails{
         System.out.println("Savings Balance: " + s.getBalance());
         System.out.println("Current Balance: " + c.getBalance());
     }
-
 }
 
 
